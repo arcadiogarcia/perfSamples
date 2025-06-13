@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 
 const Child = React.memo(({ items }: { items: number[] }) => {
     console.log('Child rendered, at huge cost!');;

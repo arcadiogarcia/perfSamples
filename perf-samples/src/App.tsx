@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { HeavyImport } from './components/LazyHeavyImport';
+// Use this to demostrate how heavy bundles affect time to first paint
+// import { HeavyImport } from './components/HeavyImport';
 import { UnnecessaryRerender } from './components/UnnecessaryRerender';
 import { BlockingThread } from './components/BlockingThread';
 import { ExpensiveDOM } from './components/ExpensiveDOM';

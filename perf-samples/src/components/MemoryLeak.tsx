@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const LeakyComponent = () => {
     useEffect(() => {
-        const randomObject = { id: '🔴LEAKED_OBJECT', createdAt: Date.now() };
+        const randomObject = { id: 'LEAKED_OBJECT', createdAt: Date.now() };
         const handler = () => console.log('scroll', randomObject);
         window.addEventListener('scroll', handler);
         // Fix

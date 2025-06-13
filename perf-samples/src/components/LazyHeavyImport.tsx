@@ -7,7 +7,7 @@ const LazyHeavyImport = React.lazy(() => import('./HeavyImport').then(module => 
 export const HeavyImport = () => {
     return <>
          <Suspense fallback={<div>⏳ Loading heavy module...</div>}>
-          <LazyHeavyImport />
+            <LazyHeavyImport />
         </Suspense>
     </>;
 };

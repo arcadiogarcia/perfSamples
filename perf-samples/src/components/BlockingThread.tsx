@@ -21,7 +21,7 @@ export const BlockingThread = () => {
         setResult(0);
     };
 
-    const totalIterations = 1e9; // 100 million iterations
+    const totalIterations = 5e8;
 
     const blockMainThread = () => {
         const sum = expensiveProcessing(0, totalIterations);
@@ -37,11 +37,11 @@ export const BlockingThread = () => {
     
         function processChunk() {
             console.log(`Processing chunk from ${i} to ${i + chunkSize}`);
-            if (i + chunkSize < totalIterations) {
+            if (i < totalIterations) {
+                sum += expensiveProcessing(i, i + chunkSize);
                 i += chunkSize;
                 setTimeout(processChunk, 0);
             } else {
-                sum += expensiveProcessing(i, totalIterations);
                 setResult(sum);
             }
         }

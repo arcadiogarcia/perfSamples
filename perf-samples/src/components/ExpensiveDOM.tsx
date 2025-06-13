@@ -1,10 +1,3 @@
-// 4. Expensive DOM Updates
-// - In the Performance tab, record UI interactions that update many elements.
-// - Watch for long "Recalculate Style", "Layout", or "Paint" sections.
-// - Use the Rendering panel (Cmd/Ctrl+Shift+P → "Show Rendering") to enable "Paint Flashing".
-// - This visually highlights areas being repainted and helps spot inefficient rendering.
-
-
 import { useState } from 'react';
 
 export const ExpensiveDOM = () => {
